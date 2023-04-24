@@ -1,9 +1,9 @@
 import React from "react";
 import "./Row.css";
 
-const baseUrl = `https://image.tmdb.org/t/p/original`;
+export const baseUrl = `https://image.tmdb.org/t/p/original`;
 
-const Row = ({ title, movies }) => {
+const Row = ({ title, movies, isLargeRow }) => {
   if (movies.length === 0) {
     return <p>Loading</p>;
   }
@@ -12,11 +12,13 @@ const Row = ({ title, movies }) => {
       <h2>{title}</h2>
       <div className="posters">
         {movies.map((movie) => {
-          console.log(movie);
           return (
             <img
-              className="poster"
-              src={`${baseUrl}${movie.poster_path}`}
+              key={movie.id}
+              className={`poster && ${isLargeRow && "posterLarge"}`}
+              src={`${baseUrl}${
+                isLargeRow ? movie.poster_path : movie.backdrop_path
+              }`}
               alt={movie.name}
             />
           );
