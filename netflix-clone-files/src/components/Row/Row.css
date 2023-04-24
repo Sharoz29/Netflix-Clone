@@ -1,0 +1,9 @@
+.posters {
+  display: flex;
+  flex-direction: row;
+}
+
+.poster {
+  width: 150px;
+  max-height: 100px;
+}

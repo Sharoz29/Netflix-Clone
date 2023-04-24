@@ -18,13 +18,13 @@ function App() {
   const [actionMovies, setActionMovies] = useState([]);
 
   //5.  Comedy Movies
-  const [comedyMoovies, setComedyMovies] = useState([]);
+  const [comedyMovies, setComedyMovies] = useState([]);
 
   //6.  Horror Movies
-  const [horrorMoovies, setHorrorMovies] = useState([]);
+  const [horrorMovies, setHorrorMovies] = useState([]);
 
   //7.  Romance Movies
-  const [romanceMoovies, setRomanceMovies] = useState([]);
+  const [romanceMovies, setRomanceMovies] = useState([]);
 
   //8.  Documentaries
   const [documentaries, setDocumentaries] = useState([]);
@@ -32,85 +32,111 @@ function App() {
   //Fetching Data
   //1.  Netflix Originals
   useEffect(() => {
-    fetch(requests.netflixoriginals)
-      .then((res) => res.json())
-      .then((data) => {
-        setNetflixMovies(data.results);
-      });
+    async function fetchNetflix() {
+      const netflixResponse = await fetch(requests.netflixoriginals);
+      const netflixMoviesArr = await netflixResponse.json();
+      const netflixMovies = netflixMoviesArr.results;
+      setNetflixMovies(netflixMovies);
+    }
+    fetchNetflix();
   }, []);
 
   //2.  Trending
   useEffect(() => {
-    fetch(requests.fetchTrending)
-      .then((res) => res.json())
-      .then((data) => {
-        setTrendingMovies(data.results);
-      });
+    async function fetchTrending() {
+      const trendingResponse = await fetch(requests.fetchTrending);
+      const trendingMoviesArr = await trendingResponse.json();
+      const trendingMovies = trendingMoviesArr.results;
+      // console.log(trendingMovies);
+      setTrendingMovies(trendingMovies);
+    }
+    fetchTrending();
   }, []);
 
   //3.  Top Rated
   useEffect(() => {
-    fetch(requests.fetchTopRated)
-      .then((res) => res.json())
-      .then((data) => {
-        setTopRatedMovies(data.results);
-        console.log(data.results);
-      });
+    async function fetchTopRated() {
+      const topRatedResponse = await fetch(requests.fetchTopRated);
+      const topRatedArr = await topRatedResponse.json();
+      const topRated = topRatedArr.results;
+      // console.log(topRated);
+      setTopRatedMovies(topRated);
+    }
+    fetchTopRated();
   }, []);
 
   //4.  Action Movies
   useEffect(() => {
-    fetch(requests.fetchActionMovies)
-      .then((res) => res.json())
-      .then((data) => {
-        setActionMovies(data.results);
-        console.log(data.results);
-      });
+    async function fetchAction() {
+      const actionResponse = await fetch(requests.fetchActionMovies);
+      const actionArr = await actionResponse.json();
+      const actionMovies = actionArr.results;
+      // console.log(actionMovies);
+      setActionMovies(actionMovies);
+    }
+    fetchAction();
   }, []);
 
   //5.  Comedy Movies
   useEffect(() => {
-    fetch(requests.fetchcomedyMovies)
-      .then((res) => res.json())
-      .then((data) => {
-        setComedyMovies(data.results);
-        console.log(data.results);
-      });
+    async function fetchComedy() {
+      const comedyResponse = await fetch(requests.fetchComedyMovies);
+      const comedyMoviesArr = await comedyResponse.json();
+      const comedyMovies = comedyMoviesArr.results;
+      // console.log(comedyMovies);
+      setComedyMovies(comedyMovies);
+    }
+    fetchComedy();
   }, []);
 
   //6.  Horror Movies
   useEffect(() => {
-    fetch(requests.fetchHorrorMovies)
-      .then((res) => res.json())
-      .then((data) => {
-        setTopRatedMovies(data.results);
-        console.log(data.results);
-      });
+    async function fetchHorror() {
+      const horrorResponse = await fetch(requests.fetchHorrorMovies);
+      const horrorMoviesArr = await horrorResponse.json();
+      const horrorMovies = horrorMoviesArr.results;
+      // console.log(horrorMovies);
+      setHorrorMovies(horrorMovies);
+    }
+    fetchHorror();
   }, []);
 
   //7.  Romance Movies
   useEffect(() => {
-    fetch(requests.fetchRomanceMovies)
-      .then((res) => res.json())
-      .then((data) => {
-        setRomanceMovies(data.results);
-        console.log(data.results);
-      });
+    async function fetchRomance() {
+      const romanceResponse = await fetch(requests.fetchRomanceMovies);
+      const romanceMoviesArr = await romanceResponse.json();
+      const romanceMovies = romanceMoviesArr.results;
+      // console.log(romanceMovies);
+      setRomanceMovies(romanceMovies);
+    }
+    fetchRomance();
   }, []);
 
   //8.  Documentaries
   useEffect(() => {
-    fetch(requests.fetchDocumentaries)
-      .then((res) => res.json())
-      .then((data) => {
-        setDocumentaries(data.results);
-      });
+    async function fetchDocumentaries() {
+      const documentariesResponse = await fetch(requests.fetchDocumentaries);
+      const documentariesArr = await documentariesResponse.json();
+      const documentaries = documentariesArr.results;
+      // console.log(documentaries);
+      setDocumentaries(documentaries);
+    }
+    fetchDocumentaries();
   }, []);
 
   return (
     <div className="App">
       <h1>Netflix clone</h1>
       <Row title="NETFLIX ORIGINALS" movies={netflixMovies} />
+
+      <Row title="TRENDING NOW" movies={trendingMovies} />
+      <Row title="TOP RATED MOVIES" movies={topRatedMovies} />
+      <Row title="ACTION MOVIES" movies={actionMovies} />
+      <Row title="COMEDIES" movies={comedyMovies} />
+      <Row title="HORROR MOVIES" movies={horrorMovies} />
+      <Row title="ROMANCE MOVIES" movies={romanceMovies} />
+      <Row title="DOCUMENTARIES" movies={documentaries} />
     </div>
   );
 }
