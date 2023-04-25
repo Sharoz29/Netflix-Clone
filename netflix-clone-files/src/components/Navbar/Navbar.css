@@ -1,0 +1,24 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: black;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+.logo {
+  flex: 15%;
+}
+.others {
+  display: flex;
+  flex-direction: row;
+  margin-right: 20px;
+  align-items: center;
+}
+.option {
+  margin: 0 10px;
+}
+.profile-icon {
+  border-radius: 5px;
+}

@@ -3,6 +3,7 @@ import Row from "./components/Row/Row";
 import requests from "../src/request";
 import { useState, useEffect } from "react";
 import Banner from "./components/Banner/Banner.jsx";
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   //Hooks
@@ -128,9 +129,8 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Netflix clone</h1>
-      {<Banner movies={netflixMovies} />}
-
+      <Navbar />
+      <Banner movies={netflixMovies} />
       <Row title="NETFLIX ORIGINALS" movies={netflixMovies} isLargeRow />
 
       <Row title="TRENDING NOW" movies={trendingMovies} />
