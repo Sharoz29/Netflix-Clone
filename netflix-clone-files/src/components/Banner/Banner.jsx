@@ -9,7 +9,6 @@ const Banner = ({ movies }) => {
   const random = Math.floor(Math.random() * movies.length - 1);
 
   const randomMovie = movies[random];
-  console.log(randomMovie);
   return (
     <header
       className="banner"

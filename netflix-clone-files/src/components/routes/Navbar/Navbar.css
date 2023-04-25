@@ -8,7 +8,8 @@
   z-index: 1;
 }
 .logo {
-  flex: 15%;
+  flex: 20%;
+  margin-left: 10px;
 }
 .others {
   display: flex;
@@ -21,4 +22,13 @@
 }
 .profile-icon {
   border-radius: 5px;
+}
+.option:hover {
+  cursor: pointer;
+}
+.logo:hover {
+  cursor: pointer;
+}
+.hidden {
+  display: none;
 }

@@ -1,14 +1,16 @@
-import "./App.css";
-import Navbar from "./components/routes/Navbar/Navbar";
-import Home from "./components/routes/Home/Home.jsx";
-import { Routes, Route } from "react-router-dom";
-import Result from "./components/routes/Results/Results";
-import { useEffect, useState } from "react";
-import requests from "./request";
-import Banner from "./components/Banner/Banner";
+import React from "react";
+import requests from "../../../request";
+import "./Home.css";
+import Row from "../../Row/Row";
+import { useState, useEffect } from "react";
+import Banner from "../../Banner/Banner";
 
-function App() {
+const Home = () => {
   //Hooks
+
+  //1.  Netflix
+
+  //b.  Movies Hooks
   //1.  Netflix
   const [netflixMovies, setNetflixMovies] = useState([]);
 
@@ -128,14 +130,19 @@ function App() {
     }
     fetchDocumentaries();
   }, []);
-  return (
-    <Routes>
-      <Route path="/" element={<Navbar />}>
-        <Route index={true} element={<Home />} />
-        <Route path="results" element={<Result />} />
-      </Route>
-    </Routes>
-  );
-}
 
-export default App;
+  return (
+    <>
+      <Banner movies={netflixMovies} />
+      <Row title="NETFLIX ORIGINALS" movies={netflixMovies} isLargeRow />
+      <Row title="TRENDING NOW" movies={trendingMovies} />
+      <Row title="TOP RATED MOVIES" movies={topRatedMovies} />
+      <Row title="ACTION MOVIES" movies={actionMovies} />
+      <Row title="COMEDIES" movies={comedyMovies} />
+      <Row title="HORROR MOVIES" movies={horrorMovies} />
+      <Row title="ROMANCE MOVIES" movies={romanceMovies} />
+      <Row title="DOCUMENTARIES" movies={documentaries} />
+    </>
+  );
+};
+export default Home;

@@ -1,0 +1,22 @@
+.search-container {
+  border: 1px solid white;
+  max-height: 33px;
+  display: flex;
+  flex-direction: row;
+}
+.searcher {
+  position: relative;
+  height: 33px;
+  border: none;
+  padding: 0;
+  background-color: black;
+  width: 250px;
+  padding-left: 10px;
+  color: #fff;
+}
+input:focus {
+  outline: none;
+}
+.hidden {
+  display: none;
+}

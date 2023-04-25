@@ -1,14 +1,15 @@
-import "./App.css";
-import Navbar from "./components/routes/Navbar/Navbar";
-import Home from "./components/routes/Home/Home.jsx";
-import { Routes, Route } from "react-router-dom";
-import Result from "./components/routes/Results/Results";
-import { useEffect, useState } from "react";
-import requests from "./request";
-import Banner from "./components/Banner/Banner";
+import React from "react";
+import Row from "../../Row/Row";
+import { useState, useEffect } from "react";
+import requests from "../../../request";
+import Home from "../Home/Home";
 
-function App() {
+const Result = () => {
   //Hooks
+
+  //1.  Netflix
+
+  //b.  Movies Hooks
   //1.  Netflix
   const [netflixMovies, setNetflixMovies] = useState([]);
 
@@ -40,6 +41,10 @@ function App() {
       const netflixResponse = await fetch(requests.netflixoriginals);
       const netflixMoviesArr = await netflixResponse.json();
       const netflixMovies = netflixMoviesArr.results;
+      const netflixMoviesNames = netflixMovies.map((doc) => {
+        return doc.title;
+      });
+      console.log(netflixMoviesNames);
       setNetflixMovies(netflixMovies);
     }
     fetchNetflix();
@@ -51,7 +56,10 @@ function App() {
       const trendingResponse = await fetch(requests.fetchTrending);
       const trendingMoviesArr = await trendingResponse.json();
       const trendingMovies = trendingMoviesArr.results;
-      // console.log(trendingMovies);
+      const trendingMoviesName = trendingMovies.map((movie) => {
+        return movie.title;
+      });
+      console.log(trendingMoviesName);
       setTrendingMovies(trendingMovies);
     }
     fetchTrending();
@@ -63,7 +71,10 @@ function App() {
       const topRatedResponse = await fetch(requests.fetchTopRated);
       const topRatedArr = await topRatedResponse.json();
       const topRated = topRatedArr.results;
-      // console.log(topRated);
+      const topRatedName = topRated.map((movie) => {
+        return movie.title;
+      });
+      console.log(topRatedName);
       setTopRatedMovies(topRated);
     }
     fetchTopRated();
@@ -75,7 +86,10 @@ function App() {
       const actionResponse = await fetch(requests.fetchActionMovies);
       const actionArr = await actionResponse.json();
       const actionMovies = actionArr.results;
-      // console.log(actionMovies);
+      const actionName = actionMovies.map((movie) => {
+        return movie.title;
+      });
+      console.log(actionName);
       setActionMovies(actionMovies);
     }
     fetchAction();
@@ -87,7 +101,10 @@ function App() {
       const comedyResponse = await fetch(requests.fetchComedyMovies);
       const comedyMoviesArr = await comedyResponse.json();
       const comedyMovies = comedyMoviesArr.results;
-      // console.log(comedyMovies);
+      const comedyName = comedyMovies.map((movie) => {
+        return movie.title;
+      });
+      console.log(comedyName);
       setComedyMovies(comedyMovies);
     }
     fetchComedy();
@@ -99,7 +116,10 @@ function App() {
       const horrorResponse = await fetch(requests.fetchHorrorMovies);
       const horrorMoviesArr = await horrorResponse.json();
       const horrorMovies = horrorMoviesArr.results;
-      // console.log(horrorMovies);
+      const horrorName = horrorMovies.map((movie) => {
+        return movie.title;
+      });
+      console.log(horrorName);
       setHorrorMovies(horrorMovies);
     }
     fetchHorror();
@@ -111,7 +131,10 @@ function App() {
       const romanceResponse = await fetch(requests.fetchRomanceMovies);
       const romanceMoviesArr = await romanceResponse.json();
       const romanceMovies = romanceMoviesArr.results;
-      // console.log(romanceMovies);
+      const romanceName = romanceMovies.map((movie) => {
+        return movie.title;
+      });
+      console.log(romanceName);
       setRomanceMovies(romanceMovies);
     }
     fetchRomance();
@@ -123,19 +146,28 @@ function App() {
       const documentariesResponse = await fetch(requests.fetchDocumentaries);
       const documentariesArr = await documentariesResponse.json();
       const documentaries = documentariesArr.results;
-      // console.log(documentaries);
+
+      const documentariesName = documentaries.map((doc) => {
+        return doc.title;
+      });
+      console.log(documentariesName);
       setDocumentaries(documentaries);
     }
     fetchDocumentaries();
   }, []);
-  return (
-    <Routes>
-      <Route path="/" element={<Navbar />}>
-        <Route index={true} element={<Home />} />
-        <Route path="results" element={<Result />} />
-      </Route>
-    </Routes>
-  );
-}
 
-export default App;
+  return (
+    <>
+      <Row title="NETFLIX ORIGINALS" movies={netflixMovies} isLargeRow />
+      <Row title="TRENDING NOW" movies={trendingMovies} />
+      <Row title="TOP RATED MOVIES" movies={topRatedMovies} />
+      <Row title="ACTION MOVIES" movies={actionMovies} />
+      <Row title="COMEDIES" movies={comedyMovies} />
+      <Row title="HORROR MOVIES" movies={horrorMovies} />
+      <Row title="ROMANCE MOVIES" movies={romanceMovies} />
+      <Row title="DOCUMENTARIES" movies={documentaries} />
+    </>
+  );
+};
+
+export default Result;
