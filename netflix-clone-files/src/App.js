@@ -129,7 +129,7 @@ function App() {
   return (
     <div className="App">
       <h1>Netflix clone</h1>
-      <Banner movies={netflixMovies} />
+      {<Banner movies={netflixMovies} />}
 
       <Row title="NETFLIX ORIGINALS" movies={netflixMovies} isLargeRow />
 
