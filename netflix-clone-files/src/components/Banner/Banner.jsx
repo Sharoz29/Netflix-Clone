@@ -14,13 +14,13 @@ const Banner = ({ movies }) => {
       className="banner"
       style={{
         backgroundSize: "cover",
-        backgroundImage: `url('${baseUrl}${randomMovie.backdrop_path}')`,
+        backgroundImage: `url('${baseUrl}${randomMovie?.backdrop_path}')`,
         backgroundPosition: "center-center",
       }}
     >
       <div className="content"></div>
       {/*Banner Content*/}
-      <h1 className="title">{randomMovie.name}</h1>
+      <h1 className="title">{randomMovie?.name}</h1>
 
       <div className="btns">
         {/*2 Buttons*/}

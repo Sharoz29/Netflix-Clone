@@ -7,10 +7,12 @@ export const baseUrl = `https://image.tmdb.org/t/p/original`;
 
 const Row = ({ title, movies, isLargeRow }) => {
   const [openModal, setOpenModal] = useState(false);
+  const [movieInfo, setMovieInfo] = useState([]);
 
   const clickEvent = (e) => {
     setOpenModal(true);
-    console.log(openModal);
+    const targetMovie = e.target;
+    setMovieInfo(targetMovie);
   };
 
   if (movies.length === 0) {
@@ -23,22 +25,26 @@ const Row = ({ title, movies, isLargeRow }) => {
         {movies.map((movie) => {
           const name = movie.name;
           const title = movie.title;
-          const overview = movie.overview;
-          // console.log(movie);
+          const info = movie.overview;
+          const releaseDate = movie.release_date;
+          const firstAirDate = movie.first_air_date;
           return (
             <>
               <img
                 key={movie.id}
                 name={name || title}
+                value={info}
+                releasedate={releaseDate || firstAirDate}
                 className={`poster && ${isLargeRow && "posterLarge"}`}
                 src={`${baseUrl}${
                   isLargeRow ? movie.poster_path : movie.backdrop_path
                 }`}
                 alt={movie.name}
                 onClick={clickEvent}
-                overview={overview}
               />
-              {openModal && <Modal setOpenModal={setOpenModal} />}
+              {openModal && (
+                <Modal setOpenModal={setOpenModal} movie={movieInfo} />
+              )}
             </>
           );
         })}
