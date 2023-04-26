@@ -1,38 +1,16 @@
 import React, { useState } from "react";
 import "./Row.css";
-import { Modal, Button } from "react-bootstrap";
+// import { Modal, Button } from "react-bootstrap";
+import Modal from "../modal/modal";
 
 export const baseUrl = `https://image.tmdb.org/t/p/original`;
 
 const Row = ({ title, movies, isLargeRow }) => {
-  const [show, setShow] = useState(false);
-  const [modalInfo, setModalInfo] = useState([]);
-  const [showModal, setShowModal] = useState(false);
+  const [openModal, setOpenModal] = useState(false);
 
-  const handleClose = () => {
-    setShow(false);
-  };
-  const handleShow = () => {
-    setShow(true);
-  };
   const clickEvent = (e) => {
-    console.log(e.target);
-    setModalInfo(e.target);
-    toggle();
-  };
-  const toggle = () => {
-    setShowModal(handleShow);
-  };
-
-  const Modalcontent = () => {
-    return (
-      <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>{modalInfo.name}</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>{modalInfo.overview}</Modal.Body>
-      </Modal>
-    );
+    setOpenModal(true);
+    console.log(openModal);
   };
 
   if (movies.length === 0) {
@@ -60,11 +38,11 @@ const Row = ({ title, movies, isLargeRow }) => {
                 onClick={clickEvent}
                 overview={overview}
               />
+              {openModal && <Modal setOpenModal={setOpenModal} />}
             </>
           );
         })}
       </div>
-      <Modalcontent />
     </div>
   );
 };

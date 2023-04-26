@@ -2,7 +2,6 @@ import React from "react";
 import Row from "../../Row/Row";
 import { useState, useEffect } from "react";
 import requests from "../../../request";
-import Home from "../Home/Home";
 
 const Result = () => {
   //Hooks

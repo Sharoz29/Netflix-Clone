@@ -1,5 +1,6 @@
 .row {
-  margin-left: 20px;
+  padding-left: 20px;
+  width: 100%;
 
   color: white;
 }
