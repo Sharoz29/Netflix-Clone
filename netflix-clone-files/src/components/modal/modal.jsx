@@ -3,7 +3,6 @@ import "./modal.css";
 
 const Modal = ({ setOpenModal, movie }) => {
   const movieData = { movie };
-  const name = movie.name;
   const value = movieData.movie.attributes[1].value;
   const releaseDate = movieData.movie.attributes[2].value;
 
@@ -30,9 +29,9 @@ const Modal = ({ setOpenModal, movie }) => {
             alt={`${movie.alt}`}
           />
           <br></br>
-          <p>{value}</p>
+          <p className="modal-info">{value}</p>
           <br></br>
-          <p>Released On : {releaseDate}</p>
+          <p className="modal-date">Released On : {releaseDate}</p>
         </div>
         <div className="footer">
           <button

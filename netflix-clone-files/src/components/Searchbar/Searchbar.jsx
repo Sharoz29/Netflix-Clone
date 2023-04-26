@@ -1,17 +1,19 @@
 import React from "react";
 import "./Searchbar.css";
-import requests from "../../request";
-import { useState, useEffect } from "react";
 
 const Searchbar = ({ onChangeHandler, placeholder, className }) => {
+  const preventSubmit = (e) => {
+    e.preventDefault();
+  };
   return (
     <div className="search option">
-      <form className="search-container hidden">
+      <form className="search-container hidden" onSubmit={preventSubmit}>
         <input
           type="search"
           className={className}
           placeholder={placeholder}
           onChange={onChangeHandler}
+          autoFocus
         ></input>
       </form>
     </div>

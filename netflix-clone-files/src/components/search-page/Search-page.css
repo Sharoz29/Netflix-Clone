@@ -1,0 +1,21 @@
+.movie-page {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.movie-card {
+  width: 150px;
+  max-height: 250px;
+  margin: 10px;
+  transition: transform 450ms;
+  image-rendering: pixelated;
+}
+.movie-card:hover {
+  cursor: pointer;
+  transform: scale(1.08);
+}
+.search-title {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 900;
+}

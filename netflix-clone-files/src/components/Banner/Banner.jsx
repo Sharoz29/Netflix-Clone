@@ -63,7 +63,7 @@ const Banner = ({ movies }) => {
       </div>
 
       {/*Banner description*/}
-      <div className="description">{randomMovie.overview}</div>
+      <div className="description">{randomMovie?.overview}</div>
     </header>
   );
 };

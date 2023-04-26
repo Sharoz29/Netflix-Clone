@@ -4,14 +4,12 @@ import Searchbar from "../../Searchbar/Searchbar";
 import { Outlet, NavLink, Link } from "react-router-dom";
 import { Fragment } from "react";
 
-const Navbar = () => {
+const Navbar = ({ searchField, onSearchChange }) => {
   function handleClick() {
     const searchBar = document.querySelector(".search-container");
     searchBar.classList.toggle("hidden");
   }
-  const onSearchChange = (e) => {
-    console.log(e.target.value);
-  };
+
   return (
     <Fragment>
       <div className="navbar">
