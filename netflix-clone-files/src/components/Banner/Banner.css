@@ -61,3 +61,8 @@
   background: none;
   height: 300px;
 }
+@media screen and (max-width: 280px) {
+  .banner {
+    width: 100%;
+  }
+}

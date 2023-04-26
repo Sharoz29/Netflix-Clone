@@ -1,13 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Navbar.css";
 import Searchbar from "../../Searchbar/Searchbar";
 import { Outlet, NavLink, Link } from "react-router-dom";
 import { Fragment } from "react";
 
 const Navbar = ({ searchField, onSearchChange }) => {
+  const [openSearchbar, setOpenSearchbar] = useState(false);
   function handleClick() {
-    const searchBar = document.querySelector(".search-container");
-    searchBar.classList.toggle("hidden");
+    setOpenSearchbar((openSearchbar) => !openSearchbar);
   }
 
   return (
@@ -46,12 +46,14 @@ const Navbar = ({ searchField, onSearchChange }) => {
             </svg>
           </div>
           <NavLink to={"/results"}>
-            <Searchbar
-              onChangeHandler={onSearchChange}
-              placeholder="Titles, people, genre"
-              autoFocus
-              className="searcher"
-            />
+            {openSearchbar && (
+              <Searchbar
+                onChangeHandler={onSearchChange}
+                placeholder="Titles, people, genre"
+                autoFocus
+                className="searcher"
+              />
+            )}
           </NavLink>
           <div className="notification option">
             <svg

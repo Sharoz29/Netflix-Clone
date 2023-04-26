@@ -7,7 +7,7 @@ const Searchbar = ({ onChangeHandler, placeholder, className }) => {
   };
   return (
     <div className="search option">
-      <form className="search-container hidden" onSubmit={preventSubmit}>
+      <form className="search-container" onSubmit={preventSubmit}>
         <input
           type="search"
           className={className}

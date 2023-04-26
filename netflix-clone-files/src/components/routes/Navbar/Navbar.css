@@ -29,6 +29,30 @@
 .logo:hover {
   cursor: pointer;
 }
-.hidden {
-  display: none;
+
+@media screen and (max-width: 281px) {
+  .navbar {
+    max-width: 100%;
+  }
+  .searcher {
+    max-width: 44vw;
+  }
+  .searchbar {
+    margin: 0;
+  }
+  .user,
+  .notification {
+    display: none;
+  }
+}
+@media screen and (max-width: 415px) {
+  .navbar {
+    max-width: 100%;
+  }
+  .searcher {
+    max-width: 32vw;
+  }
+  .searchbar {
+    margin: 0;
+  }
 }

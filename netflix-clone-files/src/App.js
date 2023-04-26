@@ -4,6 +4,7 @@ import Home from "./components/routes/Home/Home.jsx";
 import { Routes, Route } from "react-router-dom";
 import Result from "./components/routes/Results/Results";
 import { useState } from "react";
+import { AnimatePresence } from "framer-motion";
 
 function App() {
   const [searchField, setSearchField] = useState("");
