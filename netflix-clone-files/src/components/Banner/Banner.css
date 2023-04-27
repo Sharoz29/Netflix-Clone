@@ -61,8 +61,42 @@
   background: none;
   height: 300px;
 }
-@media screen and (max-width: 280px) {
+@media screen and (max-width: 281px) {
   .banner {
     width: 100%;
+
+    background-position: center;
+    height: 19em;
+  }
+  .title {
+    margin-left: 10px;
+    font-size: 1.2rem;
+    top: 250px;
+  }
+  .description {
+    display: none;
+  }
+  .btns {
+    top: 295px;
+    margin-left: 10px;
+  }
+  .btn {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .btn-content {
+    display: none;
+  }
+}
+@media screen and (max-width: 414px) and (min-width: 282px) {
+  .banner {
+    width: 100%;
+    background-position: center;
+  }
+  .description {
+    width: 90%;
+    margin-left: 15px;
+    height: 20%;
+    top: 310px;
   }
 }

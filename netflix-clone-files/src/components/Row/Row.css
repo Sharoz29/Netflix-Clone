@@ -30,3 +30,29 @@
 .posterLarge:hover {
   transform: scale(1.09);
 }
+@media screen and (max-width: 280px) {
+  .row {
+    width: 100%;
+    padding: 0;
+  }
+  .row > h2 {
+    font-size: 1em;
+    padding-left: 10px;
+  }
+  .posters {
+    padding: 10px;
+  }
+  .posterLarge {
+    width: 90%;
+    max-height: 200px;
+  }
+}
+@media screen and (max-width: 414px) and (min-width: 281px) {
+  .row {
+    width: 100%;
+    padding: 0;
+  }
+  .row > h2 {
+    padding-left: 15px;
+  }
+}
