@@ -6,6 +6,7 @@
   position: sticky;
   top: 0;
   z-index: 1;
+  min-width: 100%;
 }
 .logo {
   flex: 20%;
@@ -48,11 +49,18 @@
 @media screen and (max-width: 415px) {
   .navbar {
     max-width: 100%;
+    width: 100%;
   }
   .searcher {
     max-width: 32vw;
   }
   .searchbar {
     margin: 0;
+  }
+}
+@media screen and (max-width: 200px) {
+  .navbar {
+    min-width: 100%;
+    position: fixed;
   }
 }

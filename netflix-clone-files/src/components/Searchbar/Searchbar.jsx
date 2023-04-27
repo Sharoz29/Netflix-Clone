@@ -13,7 +13,6 @@ const Searchbar = ({ onChangeHandler, placeholder, className }) => {
           className={className}
           placeholder={placeholder}
           onChange={onChangeHandler}
-          autoFocus
         ></input>
       </form>
     </div>

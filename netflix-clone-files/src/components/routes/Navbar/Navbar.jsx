@@ -48,9 +48,9 @@ const Navbar = ({ searchField, onSearchChange }) => {
           <NavLink to={"/results"}>
             {openSearchbar && (
               <Searchbar
+                onClick={onSearchChange}
                 onChangeHandler={onSearchChange}
                 placeholder="Titles, people, genre"
-                autoFocus
                 className="searcher"
               />
             )}

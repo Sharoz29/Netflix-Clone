@@ -57,7 +57,6 @@ const Footer = () => {
             <span className="topic">Contact Us</span>
           </div>
         </div>
-        <div className="service-code">Service Code</div>
         <div className="copyrights">
           <span>
             &#169; Cloned by{" "}

@@ -4,7 +4,6 @@ import Home from "./components/routes/Home/Home.jsx";
 import { Routes, Route } from "react-router-dom";
 import Result from "./components/routes/Results/Results";
 import { useState } from "react";
-import { AnimatePresence } from "framer-motion";
 
 function App() {
   const [searchField, setSearchField] = useState("");
@@ -13,6 +12,7 @@ function App() {
     const searchItem = e.target.value.toLowerCase();
     setSearchField(searchItem);
   };
+
   return (
     <Routes>
       <Route
@@ -22,6 +22,7 @@ function App() {
         }
       >
         <Route index={true} element={<Home />} />
+
         <Route
           path="results"
           element={
