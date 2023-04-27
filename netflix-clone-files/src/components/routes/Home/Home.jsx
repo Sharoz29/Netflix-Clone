@@ -4,6 +4,7 @@ import "./Home.css";
 import Row from "../../Row/Row";
 import { useState, useEffect } from "react";
 import Banner from "../../Banner/Banner";
+import Footer from "../../Footer/Footer";
 
 const Home = () => {
   //Hooks
@@ -142,6 +143,7 @@ const Home = () => {
       <Row title="HORROR MOVIES" movies={horrorMovies} />
       <Row title="ROMANCE MOVIES" movies={romanceMovies} />
       <Row title="DOCUMENTARIES" movies={documentaries} />
+      <Footer />
     </>
   );
 };
