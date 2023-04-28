@@ -1,0 +1,19 @@
+.no-result-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 7rem;
+  margin-bottom: 5rem;
+  background-color: rgb(56, 56, 56);
+}
+.no-result-title {
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+}
+.no-result-reason {
+  margin-bottom: 1rem;
+}
+ol {
+  margin-left: 2rem;
+  list-style-type: disc;
+}

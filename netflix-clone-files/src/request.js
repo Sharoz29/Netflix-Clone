@@ -1,6 +1,4 @@
-const APIKey = "27cb28ba8d1e306e8e7e33d6c073d792";
-
-//https://api.themoviedb.org/3/movie/550?api_key=27cb28ba8d1e306e8e7e33d6c073d792
+export const APIKey = "27cb28ba8d1e306e8e7e33d6c073d792";
 
 const requests = {
   fetchTrending: `https://api.themoviedb.org/3/trending/all/day?api_key=${APIKey}`,

@@ -3,8 +3,8 @@ import "./modal.css";
 
 const Modal = ({ setOpenModal, movie }) => {
   const movieData = { movie };
-  const value = movieData.movie.attributes[1].value;
-  const releaseDate = movieData.movie.attributes[2].value;
+  const value = movieData?.movie?.attributes[1]?.value;
+  const releaseDate = movieData?.movie?.attributes[2]?.value;
 
   // console.log(name, value, releasedOn);
 
