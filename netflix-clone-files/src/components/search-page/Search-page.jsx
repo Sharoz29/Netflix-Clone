@@ -1,4 +1,3 @@
-import React from "react";
 import { APIKey } from "../../request";
 import Fetcher from "../Fetcher/Fetcher";
 import Searched from "../../searched/searched";
@@ -7,7 +6,6 @@ import NotSearched from "../NotSearched/NotSearched";
 const SearchResults = ({ searchField, allmovies }) => {
   const searchFieldItem = searchField;
   const allmoviesData = allmovies;
-  console.log(allmoviesData);
 
   const searchUrl = `https://api.themoviedb.org/3/search/movie?api_key=${APIKey}&query=${searchFieldItem}`;
 

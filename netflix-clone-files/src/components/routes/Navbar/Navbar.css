@@ -23,6 +23,8 @@
 }
 .profile-icon {
   border-radius: 5px;
+  width: 2rem;
+  height: 2rem;
 }
 .option:hover {
   cursor: pointer;

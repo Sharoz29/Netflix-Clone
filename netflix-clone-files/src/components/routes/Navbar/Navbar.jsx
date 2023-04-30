@@ -4,8 +4,9 @@ import Searchbar from "../../Searchbar/Searchbar";
 import { Outlet, NavLink, Link } from "react-router-dom";
 import { Fragment } from "react";
 
-const Navbar = ({ searchField, onSearchChange }) => {
+const Navbar = ({ searchField, onSearchChange, onClicked, icon }) => {
   const [openSearchbar, setOpenSearchbar] = useState(false);
+  const image = icon;
   function handleClick() {
     setOpenSearchbar((openSearchbar) => !openSearchbar);
   }
@@ -13,7 +14,7 @@ const Navbar = ({ searchField, onSearchChange }) => {
   return (
     <Fragment>
       <div className="navbar">
-        <Link className="logo" to={"/"}>
+        <Link className="logo" to={"/home"}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             height="50"
@@ -48,7 +49,6 @@ const Navbar = ({ searchField, onSearchChange }) => {
           <NavLink to={"/results"}>
             {openSearchbar && (
               <Searchbar
-                onClick={onSearchChange}
                 onChangeHandler={onSearchChange}
                 placeholder="Titles, people, genre"
                 className="searcher"
@@ -73,13 +73,11 @@ const Navbar = ({ searchField, onSearchChange }) => {
               ></path>
             </svg>
           </div>
-          <div className="user option">
-            <img
-              className="profile-icon"
-              src="http://occ-0-2084-64.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABdpkabKqQAxyWzo6QW_ZnPz1IZLqlmNfK-t4L1VIeV1DY00JhLo_LMVFp936keDxj-V5UELAVJrU--iUUY2MaDxQSSO-0qw.png?r=e6e"
-              alt=""
-            />
-          </div>
+          <NavLink to={"/"}>
+            <div className="user option" onClick={onClicked}>
+              <img className="profile-icon" src={`${image}`} alt="" />
+            </div>
+          </NavLink>
         </div>
       </div>
       <Outlet />
