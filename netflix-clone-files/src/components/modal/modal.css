@@ -14,8 +14,8 @@
 }
 
 .modal-container {
-  width: 500px;
-  height: 500px;
+  width: 50%;
+  height: 50%;
   border-radius: 12px;
   background-color: white !important;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -26,7 +26,6 @@
 }
 
 .modal-container .modal-title {
-  display: inline-block;
   text-align: center;
   margin-top: 10px;
   margin-left: 15px;
@@ -87,5 +86,210 @@
 }
 p {
   font-size: 0.7rem;
-  text-justify: newspaper;
+}
+/* Dynamic Responsiveness */
+
+@media screen and (max-width: 281px) {
+  .close-button {
+    font-size: 1rem;
+  }
+  .modal-title {
+    font-size: 0.4rem;
+  }
+  .body {
+    height: 80%;
+  }
+  .modal-img {
+    width: 70%;
+    margin-top: 1rem;
+  }
+  .footer > button {
+    margin: 1rem !important;
+    height: 1.5rem !important;
+    font-size: 1rem !important;
+  }
+}
+@media screen and (max-width: 321px) and (min-width: 282px) {
+  .modal-container {
+    height: 70%;
+  }
+  .close-button {
+    font-size: 1rem;
+  }
+  .modal-title {
+    font-size: 0.4rem;
+  }
+  .body {
+    height: 80%;
+  }
+  .modal-img {
+    width: 70%;
+    margin-top: 1rem;
+  }
+  .footer > button {
+    margin: 1rem !important;
+    height: 1.5rem !important;
+    font-size: 1rem !important;
+  }
+}
+@media screen and (max-width: 376px) and (min-width: 322px) {
+  .modal-container {
+    height: 70%;
+  }
+  .close-button {
+    font-size: 1rem;
+  }
+  .modal-title {
+    font-size: 0.4rem;
+  }
+  .body {
+    height: 80%;
+  }
+  .modal-img {
+    width: 70%;
+    margin-top: 1rem;
+  }
+  .footer > button {
+    margin: 1rem !important;
+    height: 1.5rem !important;
+    font-size: 1rem !important;
+  }
+}
+
+@media screen and (max-width: 426px) and (min-width: 377px) {
+  .modal-container {
+    height: 70%;
+  }
+  .close-button {
+    font-size: 1rem;
+  }
+  .modal-title {
+    font-size: 0.4rem;
+  }
+  .body {
+    height: 80%;
+  }
+  .modal-img {
+    width: 70%;
+    margin-top: 1rem;
+  }
+  .footer > button {
+    margin: 1rem !important;
+    height: 1.5rem !important;
+    font-size: 1rem !important;
+  }
+}
+@media screen and (max-width: 769px) and (min-width: 426px) {
+  .modal-container {
+    height: 70%;
+  }
+  .close-button {
+    font-size: 1rem;
+  }
+  .modal-title {
+    font-size: 0.4rem;
+  }
+  .body {
+    height: 80%;
+  }
+  .modal-img {
+    width: 70%;
+    margin-top: 1rem;
+  }
+  .footer > button {
+    margin: 1rem !important;
+    height: 1.5rem !important;
+    font-size: 1rem !important;
+  }
+}
+@media screen and (max-width: 1025px) and (min-width: 770px) {
+  .modal-container {
+    height: 70%;
+  }
+  .close-button {
+    font-size: 1rem;
+  }
+  .modal-title {
+    font-size: 0.7rem;
+    margin-bottom: 1rem;
+  }
+  .body {
+    height: 80%;
+  }
+  .modal-img {
+    width: 70%;
+    margin-top: 1rem;
+  }
+  .modal-info,
+  .modal-date {
+    font-size: 1rem;
+  }
+
+  .footer > button {
+    margin: 1rem !important;
+    height: 1.5rem !important;
+    font-size: 1rem !important;
+  }
+}
+@media screen and (max-width: 1441px) and (min-width: 1026px) {
+  .modal-container {
+    height: 70%;
+  }
+  .close-button {
+    font-size: 1rem;
+  }
+  .modal-title {
+    font-size: 1rem;
+  }
+  .body {
+    height: 80%;
+  }
+  .modal-info,
+  .modal-date {
+    font-size: 1rem;
+  }
+
+  .modal-img {
+    width: 70%;
+    margin-top: 7rem;
+    height: 15rem;
+  }
+  .footer > button {
+    margin-top: 5rem !important;
+  }
+}
+@media screen and (min-width: 1442px) {
+  .modal-container {
+    height: 70%;
+  }
+  .close-button {
+    font-size: 3rem;
+  }
+  .modal-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem !important;
+  }
+  .body {
+    height: 80%;
+  }
+  .modal-img {
+    width: 70%;
+    margin-top: 25rem;
+    height: 30rem;
+  }
+  .modal-info,
+  .modal-date {
+    font-size: 1.5rem;
+    width: 50%;
+  }
+
+  .footer > button {
+    margin: 1rem !important;
+    width: 15rem !important;
+    height: 5rem !important;
+    font-size: 2rem !important;
+    position: relative !important;
+    top: 40%;
+  }
 }

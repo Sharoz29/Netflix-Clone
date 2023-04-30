@@ -6,7 +6,6 @@
   position: sticky;
   top: 0;
   z-index: 1;
-  min-width: 100%;
 }
 .logo {
   flex: 20%;
@@ -17,6 +16,8 @@
   flex-direction: row;
   margin-right: 20px;
   align-items: center;
+  flex: 80%;
+  justify-content: flex-end;
 }
 .option {
   margin: 0 10px;
@@ -33,9 +34,16 @@
   cursor: pointer;
 }
 
-@media screen and (max-width: 281px) {
+/* Dynamic Responsiveness */
+
+@media screen and (max-width: 200px) {
   .navbar {
-    max-width: 100%;
+    min-width: 100%;
+    position: fixed;
+  }
+  .logo > svg {
+    width: 3rem;
+    height: 3rem;
   }
   .searcher {
     max-width: 44vw;
@@ -43,26 +51,61 @@
   .searchbar {
     margin: 0;
   }
-  .user,
   .notification {
     display: none;
   }
 }
-@media screen and (max-width: 415px) {
+@media screen and (max-width: 281px) and (min-width: 201px) {
   .navbar {
     max-width: 100%;
-    width: 100%;
+  }
+  .logo > svg {
+    width: 3rem;
+    height: 3rem;
   }
   .searcher {
-    max-width: 32vw;
+    max-width: 44vw;
   }
   .searchbar {
     margin: 0;
   }
+  .notification {
+    display: none;
+  }
 }
-@media screen and (max-width: 200px) {
+
+@media screen and (max-width: 321px) and (min-width: 282px) {
+  .logo {
+    margin-left: 0;
+  }
   .navbar {
-    min-width: 100%;
-    position: fixed;
+    width: 100%;
+  }
+  .searcher {
+    max-width: 30vw;
+  }
+  .searchbar {
+    margin: 0;
+  }
+  .notification {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 426px) and (min-width: 321px) {
+  .logo {
+    margin-left: 0;
+  }
+  .navbar {
+    width: 100%;
+  }
+  .searcher {
+    max-width: 30vw;
+  }
+  .searchbar {
+    margin: 0;
+  }
+  .notification {
+    display: none;
   }
 }

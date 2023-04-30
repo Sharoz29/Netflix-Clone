@@ -1,8 +1,8 @@
-import { baseUrl } from "../components/Row/Row";
+import { baseUrl } from "../Row/Row";
 import { useState } from "react";
-import Modal from "../components/modal/modal";
+import Modal from "../modal/modal";
 import "./searched.css";
-import Footer from "../components/Footer/Footer";
+import Footer from "../Footer/Footer";
 
 const Searched = ({ movies }) => {
   const [openModal, setOpenModal] = useState(false);

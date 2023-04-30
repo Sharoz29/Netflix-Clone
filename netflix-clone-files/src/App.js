@@ -12,7 +12,7 @@ function App() {
 
   const iconsClicked = (e) => {
     const icon = [e.target];
-    const imageSrc = icon[0].__reactProps$08l96o9r5ye7.value;
+    const imageSrc = icon[0].attributes[3].nodeValue;
     setIcon(imageSrc);
   };
 

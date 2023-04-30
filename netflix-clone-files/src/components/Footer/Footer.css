@@ -34,6 +34,7 @@
 
 .copyrights {
   margin: 0.5rem;
+  text-align: center;
 }
 a {
   text-decoration: none;
@@ -79,8 +80,23 @@ a:hover {
   }
 }
 
+/* Dynamic Responsiveness */
+
 @media screen and (max-width: 200px) {
   .tc {
     display: none;
+  }
+}
+@media screen and (max-width: 281px) and (min-width: 201px) {
+  .footer-container {
+    margin-top: 1rem;
+  }
+  .topic-content {
+    flex-flow: row wrap;
+  }
+}
+@media screen and (max-width: 321px) and (min-width: 282px) {
+  .footer-container {
+    margin-top: 2rem;
   }
 }

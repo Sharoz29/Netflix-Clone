@@ -68,3 +68,84 @@
   opacity: 1;
   cursor: pointer;
 }
+/* Dynamic Responsiveness */
+@media screen and (max-width: 200px) {
+  .user-icons-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    height: 100%;
+  }
+  .user-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .manage-users {
+    display: none;
+  }
+}
+@media screen and (max-width: 281px) and (min-width: 201px) {
+  .users-container,
+  .user-icons-container {
+    width: 100%;
+  }
+  .user-icons-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .manage-users {
+    padding: 0.5rem 1.5rem;
+  }
+  .user-icons-container {
+    margin-bottom: 1rem;
+  }
+}
+@media screen and (max-width: 321px) and (min-width: 282px) {
+  .user-icons-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+  }
+  .user-icon {
+    width: 4rem;
+    height: 4rem;
+  }
+  .manage-users {
+    display: none;
+  }
+}
+@media screen and (max-width: 376px) and (min-width: 322px) {
+  .users-container {
+    width: 95%;
+  }
+  .user-icons-container {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 426px) and (min-width: 376px) {
+  .users-container {
+    width: 95%;
+  }
+  .user-icons-container {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1025px) and (min-width: 850px) {
+  .user-icon {
+    width: 6rem;
+    height: 6rem;
+  }
+}
+@media screen and (max-width: 1441px) and (min-width: 1026px) {
+  .user-icon {
+    width: 8rem;
+    height: 8rem;
+  }
+}
+@media screen and (min-width: 1442px) {
+  .user-icon {
+    width: 10rem;
+    height: 10rem;
+  }
+}

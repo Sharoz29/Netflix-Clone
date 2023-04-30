@@ -1,6 +1,5 @@
 import React from "react";
 import requests from "../../../request";
-import "./Home.css";
 import Row from "../../Row/Row";
 import Banner from "../../Banner/Banner";
 import Footer from "../../Footer/Footer";

@@ -1,6 +1,6 @@
 import { APIKey } from "../../request";
 import Fetcher from "../Fetcher/Fetcher";
-import Searched from "../../searched/searched";
+import Searched from "../searched/searched";
 import NotSearched from "../NotSearched/NotSearched";
 
 const SearchResults = ({ searchField, allmovies }) => {

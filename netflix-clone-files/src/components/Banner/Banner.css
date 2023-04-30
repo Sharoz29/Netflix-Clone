@@ -1,8 +1,9 @@
 .banner {
   color: white;
   object-fit: contain;
-  height: 448px;
+  height: 28rem;
   margin-bottom: 10px;
+  background-position: top center;
 }
 .title {
   margin-left: 30px;
@@ -56,23 +57,39 @@
   background: none;
   height: 300px;
 }
-@media screen and (max-width: 281px) {
+/* Dynamic Responsiveness */
+
+@media screen and (max-width: 200px) {
+  .banner {
+    height: 15rem;
+  }
+  .title {
+    top: 12rem;
+    font-size: 1rem;
+  }
+  .btns {
+    display: none;
+  }
+  .description {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 321px) and (min-width: 201px) {
   .banner {
     width: 100%;
-
-    background-position: center;
     height: 19em;
   }
   .title {
     margin-left: 10px;
     font-size: 1.2rem;
-    top: 250px;
+    top: 15rem;
   }
   .description {
     display: none;
   }
   .btns {
-    top: 310px;
+    top: 18rem;
     margin-left: 10px;
   }
   .btn {
@@ -83,23 +100,87 @@
     display: none;
   }
 }
-@media screen and (max-width: 414px) and (min-width: 282px) {
+@media screen and (max-width: 376px) and (min-width: 322px) {
   .banner {
     width: 100%;
-    background-position: center;
+    height: 24rem;
   }
-  .description {
-    width: 90%;
-    margin-left: 15px;
-    height: 20%;
-    top: 310px;
-  }
-}
-@media screen and (max-width: 200px) {
   .title {
-    display: none;
+    top: 14rem;
   }
   .btns {
+    top: 18rem;
+  }
+  .btn {
+    height: 2rem;
+  }
+  .description {
     display: none;
+  }
+}
+@media screen and (max-width: 426px) and (min-width: 377px) {
+  .description {
+    font-size: 0.77rem;
+  }
+}
+
+@media screen and (max-width: 769px) and (min-width: 427px) {
+  .banner {
+    height: 25rem;
+  }
+  .title {
+    top: 15rem;
+  }
+  .btns {
+    top: 18rem;
+  }
+  .description {
+    top: 21rem;
+  }
+}
+@media screen and (max-width: 1025px) and (min-width: 770px) {
+  .title {
+    top: 15rem;
+  }
+  .btns {
+    top: 18rem;
+  }
+  .description {
+    top: 21rem;
+  }
+}
+@media screen and (max-width: 1441px) and (min-width: 771px) {
+  .banner {
+    font-size: 1.5rem;
+    height: 35rem;
+  }
+  .title {
+    top: 15rem;
+  }
+  .btns {
+    top: 20rem;
+  }
+  .description {
+    top: 24rem;
+  }
+}
+
+@media screen and (max-width: 2561px) and (min-width: 1442px) {
+  .banner {
+    height: 50rem;
+  }
+  .title {
+    margin: 2rem;
+    top: 30rem;
+    font-size: 2.5rem;
+  }
+  .btns {
+    margin: 2rem;
+    top: 34rem;
+  }
+  .description {
+    margin: 2rem;
+    top: 39rem;
+    font-size: 1.75rem;
   }
 }
