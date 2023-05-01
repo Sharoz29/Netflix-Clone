@@ -14,8 +14,8 @@
 }
 
 .modal-container {
-  width: 50%;
-  height: 50%;
+  width: 50vw;
+  height: 50vw;
   border-radius: 12px;
   background-color: white !important;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -25,7 +25,7 @@
   z-index: 3;
 }
 
-.modal-container .modal-title {
+.modal-title {
   text-align: center;
   margin-top: 10px;
   margin-left: 15px;
@@ -81,35 +81,27 @@
 .modal-img {
   margin-top: 20px;
   width: 75px;
-  height: 150px;
+  height: 20vw;
   image-rendering: pixelated;
 }
 p {
   font-size: 0.7rem;
 }
 /* Dynamic Responsiveness */
-
-@media screen and (max-width: 281px) {
-  .close-button {
-    font-size: 1rem;
-  }
-  .modal-title {
-    font-size: 0.4rem;
-  }
-  .body {
-    height: 80%;
+@media screen and (max-width: 280px) {
+  .modal-container {
+    width: 100%;
+    height: 100%;
   }
   .modal-img {
-    width: 70%;
-    margin-top: 1rem;
+    height: 40%;
   }
-  .footer > button {
-    margin: 1rem !important;
-    height: 1.5rem !important;
-    font-size: 1rem !important;
+  .body {
+    margin-top: 5rem;
   }
 }
-@media screen and (max-width: 321px) and (min-width: 282px) {
+
+@media screen and (max-width: 321px) and (min-width: 281px) {
   .modal-container {
     height: 70%;
   }
@@ -124,14 +116,16 @@ p {
   }
   .modal-img {
     width: 70%;
-    margin-top: 1rem;
+    height: 40%;
+    margin-top: 7rem;
   }
   .footer > button {
-    margin: 1rem !important;
+    margin-top: 4rem !important;
     height: 1.5rem !important;
     font-size: 1rem !important;
   }
 }
+
 @media screen and (max-width: 376px) and (min-width: 322px) {
   .modal-container {
     height: 70%;
@@ -143,7 +137,7 @@ p {
     font-size: 0.4rem;
   }
   .body {
-    height: 80%;
+    height: 80vw;
   }
   .modal-img {
     width: 70%;
@@ -217,8 +211,9 @@ p {
     height: 80%;
   }
   .modal-img {
-    width: 70%;
+    width: 50%;
     margin-top: 1rem;
+    height: 40%;
   }
   .modal-info,
   .modal-date {
@@ -233,7 +228,7 @@ p {
 }
 @media screen and (max-width: 1441px) and (min-width: 1026px) {
   .modal-container {
-    height: 70%;
+    height: 80%;
   }
   .close-button {
     font-size: 1rem;
@@ -246,16 +241,16 @@ p {
   }
   .modal-info,
   .modal-date {
-    font-size: 1rem;
+    font-size: 0.7rem;
   }
 
   .modal-img {
-    width: 70%;
+    width: 10rem;
     margin-top: 7rem;
-    height: 15rem;
+    height: 10rem;
   }
   .footer > button {
-    margin-top: 5rem !important;
+    margin-top: 3rem !important;
   }
 }
 @media screen and (min-width: 1442px) {
@@ -274,9 +269,9 @@ p {
     height: 80%;
   }
   .modal-img {
-    width: 70%;
+    width: 40%;
     margin-top: 25rem;
-    height: 30rem;
+    height: 40%;
   }
   .modal-info,
   .modal-date {

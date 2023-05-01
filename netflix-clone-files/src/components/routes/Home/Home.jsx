@@ -26,26 +26,62 @@ const Home = () => {
     <>
       {netFlixData && <Banner movies={netFlixData} />}
       {netFlixData && (
-        <Row title="NETFLIX ORIGINALS" movies={netFlixData} isLargeRow />
+        <Row
+          title="NETFLIX ORIGINALS"
+          movies={netFlixData}
+          isLargeRow
+          key={"NETFLIX"}
+          id={"NETFLIX"}
+        />
       )}
       {trendingMovieData && (
-        <Row title="TRENDING NOW" movies={trendingMovieData} />
+        <Row
+          title="TRENDING NOW"
+          movies={trendingMovieData}
+          key={"TRENDING"}
+          id={"TRENDING"}
+        />
       )}
       {topRatedMoviesData && (
-        <Row title="TOP RATED MOVIES" movies={topRatedMoviesData} />
+        <Row
+          title="TOP RATED MOVIES"
+          movies={topRatedMoviesData}
+          key={"TOP"}
+          id={"TOP"}
+        />
       )}
       {actionMoviesData && (
-        <Row title="ACTION MOVIES" movies={actionMoviesData} />
+        <Row
+          title="ACTION MOVIES"
+          movies={actionMoviesData}
+          key={"ACTION"}
+          id={"ACTION"}
+        />
       )}
       {comedyMoviesData && <Row title="COMEDIES" movies={comedyMoviesData} />}
       {horrorMoviesData && (
-        <Row title="HORROR MOVIES" movies={horrorMoviesData} />
+        <Row
+          title="HORROR MOVIES"
+          movies={horrorMoviesData}
+          key={"HORROR"}
+          id={"HORROR"}
+        />
       )}
       {romanceMoviesData && (
-        <Row title="ROMANCE MOVIES" movies={romanceMoviesData} />
+        <Row
+          title="ROMANCE MOVIES"
+          movies={romanceMoviesData}
+          key={"ROMANCE"}
+          id={"ROMANCE"}
+        />
       )}
       {documentariesData && (
-        <Row title="DOCUMENTARIES" movies={documentariesData} />
+        <Row
+          title="DOCUMENTARIES"
+          movies={documentariesData}
+          key={"DOCUMNETARIES"}
+          id={"DOCUMENTARIES"}
+        />
       )}
       <Footer />
     </>

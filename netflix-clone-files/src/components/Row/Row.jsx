@@ -5,7 +5,7 @@ import Modal from "../modal/modal";
 
 export const baseUrl = `https://image.tmdb.org/t/p/original`;
 
-const Row = ({ title, movies, isLargeRow }) => {
+const Row = ({ title, movies, isLargeRow, id }) => {
   const [openModal, setOpenModal] = useState(false);
   const [movieInfo, setMovieInfo] = useState([]);
 
@@ -19,7 +19,7 @@ const Row = ({ title, movies, isLargeRow }) => {
     return <p>Loading</p>;
   }
   return (
-    <div className="row">
+    <div className="row" key={id}>
       <h2>{title}</h2>
       <div className="posters">
         {movies.map((movie) => {
@@ -31,7 +31,7 @@ const Row = ({ title, movies, isLargeRow }) => {
           return (
             <>
               <img
-                key={movie.id}
+                key={movie?.id}
                 name={name || title}
                 value={info}
                 releasedate={releaseDate || firstAirDate}
