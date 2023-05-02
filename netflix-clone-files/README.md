@@ -2,4 +2,4 @@
 
 This is my take on cloning the netflix app using create-react-app
 
-To connect with me follow me on github [Github](https://github.com/Sharoz29)
+The site is hoisted on Netlify @ (Netflix Clone)[https://netflix-clone-app-mst-29.netlify.app]
