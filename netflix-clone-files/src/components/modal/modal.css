@@ -23,6 +23,7 @@
   flex-direction: column;
   padding: 25px;
   z-index: 3;
+  color: black !important;
 }
 
 .modal-title {

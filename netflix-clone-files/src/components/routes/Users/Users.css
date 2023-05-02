@@ -123,7 +123,7 @@
     width: 100%;
   }
 }
-@media screen and (max-width: 426px) and (min-width: 376px) {
+@media screen and (max-width: 500px) and (min-width: 376px) {
   .users-container {
     width: 95%;
   }

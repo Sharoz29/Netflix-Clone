@@ -91,8 +91,25 @@
     display: none;
   }
 }
+@media screen and (max-width: 391px) and (min-width: 321px) {
+  .logo {
+    margin-left: 0;
+  }
+  .navbar {
+    width: 100%;
+  }
+  .searcher {
+    max-width: 30vw;
+  }
+  .searchbar {
+    margin: 0;
+  }
+  .notification {
+    display: none;
+  }
+}
 
-@media screen and (max-width: 426px) and (min-width: 321px) {
+@media screen and (max-width: 431px) and (min-width: 321px) {
   .logo {
     margin-left: 0;
   }
